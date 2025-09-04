@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E-Tech Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* General */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(120deg, #a1c4fd, #c2e9fb);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* Hero Banner */
+    header {
+      background: url("https://images.unsplash.com/photo-1526378722484-cc6c2f1cfd94") no-repeat center/cover;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 80, 180, 0.6);
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0 0 15px;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px;
+      background: #e0f0ff;
+      border-bottom: 3px solid #0077cc;
+    }
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #00509e;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #003366;
+    }
+
+    /* Sections */
+    section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 30px;
+      border-radius: 15px;
+      background: white;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      color: #00509e;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    /* Timeline Importance */
+    .timeline {
+      position: relative;
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #0077cc;
+      border-radius: 2px;
+    }
+    .event {
+      margin-bottom: 25px;
+      position: relative;
+    }
+    .event::before {
+      content: "•";
+      position: absolute;
+      left: -25px;
+      top: 0;
+      font-size: 24px;
+      color: #0077cc;
+    }
+    .event h3 {
+      margin: 0;
+      color: #0077cc;
+    }
+
+    /* Multimedia Carousel */
+    .gallery {
+      display: flex;
+      gap: 15px;
+      overflow-x: auto;
+      padding: 10px;
+      scrollbar-width: none;
+    }
+    .gallery img {
+      flex: 0 0 auto;
+      border-radius: 12px;
+      max-height: 200px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Contact */
+    .contact-box {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .contact-box input,
+    .contact-box textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+    .contact-box button {
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      background: #0077cc;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .contact-box button:hover {
+      background: #003366;
+    }
+
+    /* Scroll-to-top */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 15px;
+      cursor: pointer;
+      font-size: 18px;
+      display: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+    }
+    #scrollTopBtn:hover {
+      background: #003366;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #0077cc;
+      color: white;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <header>
+    <h1>Empowerment Technology Hub</h1>
+    <p>Equipping Learners with Digital Skills for the Future</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#intro">Introduction</a>
+    <a href="#importance">Importance</a>
+    <a href="#media">Multimedia</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Intro -->
+  <section id="intro">
+    <h2>Introduction to E-Tech</h2>
+    <p>Empowerment Technology (E-Tech) is designed to help students and educators harness digital tools for communication, innovation, and collaboration. It enhances 21st-century learning through ICT, multimedia, and online platforms.</p>
+  </section>
+
+  <!-- Importance -->
+  <section id="importance">
+    <h2>The Importance of Empowerment Technology</h2>
+    <div class="timeline">
+      <div class="event">
+        <h3>Digital Literacy</h3>
+        <p>Develops the ability to use modern tools effectively and responsibly in both learning and teaching.</p>
+      </div>
+      <div class="event">
+        <h3>Innovation</h3>
+        <p>Encourages creative approaches to problem-solving using technology-driven solutions.</p>
+      </div>
+      <div class="event">
+        <h3>Future Readiness</h3>
+        <p>Prepares students for a technology-oriented workplace by building ICT and critical thinking skills.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Multimedia -->
+  <section id="media">
+    <h2>Multimedia in Action</h2>
+    <div class="gallery">
+      <img src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" alt="Programming">
+      <img src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" alt="Online Learning">
+      <img src="https://media.giphy.com/media/L8K62iTDkzGX6/giphy.gif" alt="Coding Work">
+      <img src="https://media.giphy.com/media/3oKIPwoeGErMmaI43C/giphy.gif" alt="Technology in Action">
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <p style="text-align:center; max-width:700px; margin:0 auto 20px;">Have questions about Empowerment Technology or want to collaborate? Send us a message below and we’ll get back to you!</p>
+    <form class="contact-box" onsubmit="return sendMessage()">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Scroll to top button -->
+  <button onclick="scrollToTop()" id="scrollTopBtn">↑</button>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Empowerment Technology Hub | Designed with 💻 & 💙</p>
+  </footer>
+
+  <script>
+    // Send message alert
+    function sendMessage() {
+      alert("✅ Your message has been sent successfully!");
+      return false;
+    }
+
+    // Scroll to top button functionality
+    let scrollBtn = document.getElementByI
